@@ -32,7 +32,7 @@ public class Game {
         GameWorld world = new GameWorld();
 
         try {
-            gameMusic = new SoundClip("data/gametheme.wav");   // Open an audio input stream
+            gameMusic = new SoundClip("data/DungeonSound.wav");   // Open an audio input stream
             gameMusic.loop();                              // Set it to continous playback (looping)
         } catch (UnsupportedAudioFileException|IOException|LineUnavailableException e) {
             //code in here will deal with any errors

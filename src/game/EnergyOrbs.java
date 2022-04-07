@@ -11,7 +11,7 @@ public class EnergyOrbs extends DynamicBody {
 
     static {
         try {
-            EnergyOrbsSound = new SoundClip("data/EnergyOrbSound.wav");
+            EnergyOrbsSound = new SoundClip("data/EnergyOrbsSound.wav");
             System.out.println("Loading energy orbs sound");
         } catch (UnsupportedAudioFileException|IOException|LineUnavailableException e) {
             System.out.println(e);
