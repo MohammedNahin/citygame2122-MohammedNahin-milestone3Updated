@@ -1,16 +1,12 @@
 package game;
 
 import city.cs.engine.*;
-import city.cs.engine.Shape;
-import org.jbox2d.common.Vec2;
 
 import javax.swing.JFrame;
 
-import java.awt.*;
 import java.io.IOException;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
-import javax.swing.text.View;
 
 /**
  * Your main game entry point
@@ -29,7 +25,7 @@ public class Game {
 
 
         //make an empty game world
-        GameWorld world = new GameWorld();
+        GameLevel world = new GameLevel();
 
         try {
             gameMusic = new SoundClip("data/DungeonSound.wav");   // Open an audio input stream

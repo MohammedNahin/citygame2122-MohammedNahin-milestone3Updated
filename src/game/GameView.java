@@ -10,7 +10,7 @@ public class GameView extends UserView {
     private Image background;
     private Knight knight;
 
-    public GameView(GameWorld world, int width, int height) {
+    public GameView(GameLevel world, int width, int height) {
         super(world, width, height);
         background = new ImageIcon("data/Dungeon.png").getImage();
         knight = world.getKnight();
