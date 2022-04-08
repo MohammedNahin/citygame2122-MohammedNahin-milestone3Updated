@@ -21,7 +21,7 @@ public class Level4 extends GameLevel {
 
         //Make the collectible orbs
         EnergyOrbs energyOrbs1 = new EnergyOrbs(this);
-        energyOrbs1.setPosition(new Vec2(0,4));
+        energyOrbs1.setPosition(new Vec2(2,1));
 
 
         // make a suspended platform
@@ -44,13 +44,13 @@ public class Level4 extends GameLevel {
         movingenemy.setPosition(new Vec2(-5,-14));
 
         movingEnemy1 = new movingEnemy(this);
-        movingEnemy1.setPosition(new Vec2(-));
+        movingEnemy1.setPosition(new Vec2(5,-14));
 
 
 
         getKnight().setPosition(new Vec2(0, 11));
 
-        getDoor().setPosition(new Vec2(0, 1));
+        getDoor().setPosition(new Vec2(0, 2));
 
 
 
@@ -62,7 +62,7 @@ public class Level4 extends GameLevel {
     }
     @Override
     public boolean isComplete() {
-        if (getKnight().getEnergyOrbsCount() >=2)
+        if (getKnight().getEnergyOrbsCount() >=1)
             return true;
         else
             return false;

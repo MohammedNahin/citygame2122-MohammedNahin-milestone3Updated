@@ -114,7 +114,7 @@ public class Game {
             currentLevel.start();
         }
         else if (currentLevel instanceof Level4){
-            System.out.println("Congratulation! You've beat the game!");
+            System.out.println("Congratulations! You've beat the game!");
         }
 
     }

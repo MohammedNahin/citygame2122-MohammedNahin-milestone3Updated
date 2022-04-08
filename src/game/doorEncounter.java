@@ -7,8 +7,8 @@ public class doorEncounter implements CollisionListener {
     private GameLevel level;
     private Game game;
 
-    GameLevel currentlevel;
 
+    GameLevel currentlevel;
 
 
     public doorEncounter(GameLevel level, Game game) {
@@ -22,7 +22,10 @@ public class doorEncounter implements CollisionListener {
             System.out.println("You've reached the next level!");
 
 
+
+
         }
+
     }
 
 

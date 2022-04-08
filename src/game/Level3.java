@@ -85,7 +85,7 @@ public class Level3 extends GameLevel {
     }
     @Override
     public boolean isComplete() {
-        if (getKnight().getEnergyOrbsCount() >=2)
+        if (getKnight().getEnergyOrbsCount() >=1)
             return true;
         else
             return false;
