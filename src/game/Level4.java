@@ -8,11 +8,13 @@ import org.jbox2d.common.Vec2;
 import javax.swing.*;
 import java.awt.*;
 
-public class Level3 extends GameLevel {
+public class Level4 extends GameLevel {
 
     Image background;
+    private movingEnemy movingenemy;
+    private movingEnemy movingEnemy1;
 
-    public Level3(Game game){
+    public Level4(Game game){
         super(game);
 
         background = new ImageIcon("data/Dungeon.png").getImage();
@@ -25,43 +27,10 @@ public class Level3 extends GameLevel {
         // make a suspended platform
         Shape platformShape = new BoxShape(4, 0.5f);
         StaticBody platform = new StaticBody(this, platformShape);
-        platform.setPosition(new Vec2(-12, -10));
+        platform.setPosition(new Vec2(0, 0));
 
         StaticBody platform1 = new StaticBody(this,platformShape);
-        platform1.setPosition(new Vec2(0,3));
-
-        StaticBody platform2 = new StaticBody(this,platformShape);
-        platform2.setPosition(new Vec2(-5,-5));
-
-
-        LavaFloor lavaFloor = new LavaFloor(this);
-        lavaFloor.setPosition(new Vec2(-12,-14));
-
-        LavaFloor lavaFloor1 = new LavaFloor(this);
-        lavaFloor1.setPosition(new Vec2(-8,-14));
-
-        LavaFloor lavaFloor2 = new LavaFloor(this);
-        lavaFloor2.setPosition(new Vec2(-5,-14));
-
-        LavaFloor lavaFloor3 = new LavaFloor(this);
-        lavaFloor3.setPosition(new Vec2(2,-14));
-
-        LavaFloor lavaFloor4 = new LavaFloor(this);
-        lavaFloor4.setPosition(new Vec2(6,-14));
-
-        LavaFloor lavaFloor5 = new LavaFloor(this);
-        lavaFloor5.setPosition(new Vec2(12,-14));
-
-        LavaFloor lavaFloor6 = new LavaFloor(this);
-        lavaFloor6.setPosition(new Vec2(11,4));
-
-
-
-
-
-
-
-
+        platform.setPosition(new Vec2(0,10));
 
         //make walls
         Shape wallShape = new BoxShape(1, 20.5f);
@@ -71,9 +40,17 @@ public class Level3 extends GameLevel {
         StaticBody wall1 = new StaticBody(this, wallShape);
         wall1.setPosition(new Vec2(15, -5));
 
-        getKnight().setPosition(new Vec2(-12, -9));
+        movingenemy = new movingEnemy(this);
+        movingenemy.setPosition(new Vec2(-5,-14));
 
-        getDoor().setPosition(new Vec2(11, 6));
+        movingEnemy1 = new movingEnemy(this);
+        movingEnemy1.setPosition(new Vec2(-));
+
+
+
+        getKnight().setPosition(new Vec2(0, 11));
+
+        getDoor().setPosition(new Vec2(0, 1));
 
 
 

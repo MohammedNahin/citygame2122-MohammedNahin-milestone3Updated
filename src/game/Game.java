@@ -106,6 +106,16 @@ public class Game {
             view.setWorld(currentLevel);
             currentLevel.start();
         }
+        else if (currentLevel instanceof Level3){
+            currentLevel.stop();
+            currentLevel = new Level4(this);
+            controller.updateKnight(currentLevel.getKnight());
+            view.setWorld(currentLevel);
+            currentLevel.start();
+        }
+        else if (currentLevel instanceof Level4){
+            System.out.println("Congratulation! You've beat the game!");
+        }
 
     }
 
