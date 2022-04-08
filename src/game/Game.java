@@ -93,16 +93,18 @@ public class Game {
         if (currentLevel instanceof Level1) {
             currentLevel.stop();
             currentLevel = new Level2(this);
-
-
             controller.updateKnight(currentLevel.getKnight());
-
-
-
             view.setWorld(currentLevel);
             currentLevel.start();
 
 
+        }
+        else if (currentLevel instanceof Level2){
+            currentLevel.stop();
+            currentLevel = new Level3(this);
+            controller.updateKnight(currentLevel.getKnight());
+            view.setWorld(currentLevel);
+            currentLevel.start();
         }
 
     }

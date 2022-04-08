@@ -29,12 +29,17 @@ public class Encounter implements CollisionListener {
             e.getReportingBody().destroy();
             new Game();
         }
+        else if (e.getOtherBody() instanceof LavaFloor){
+            System.out.println("You died to lava! Try again");
+            e.getReportingBody().destroy();
+            new Game();
+        }
         else if (e.getOtherBody() instanceof Enemy3){
             System.out.println("You died! Try again");
             e.getReportingBody().destroy();
             new Game();
         }
-        else if (e.getOtherBody() instanceof Door){
+        else if (e.getOtherBody()instanceof Door){
 
 
         }
