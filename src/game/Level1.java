@@ -56,13 +56,13 @@ public class Level1 extends GameLevel{
 
         getKnight().setPosition(new Vec2(7, -14));
 
-        Enemy1 enemy1 = new Enemy1(this);
+        enemy1 = new Enemy1(this);
         enemy1.setPosition(new Vec2(7,-7));
 
-        Enemy2 enemy2 = new Enemy2(this);
+        enemy2 = new Enemy2(this);
         enemy2.setPosition(new Vec2(-6,-14));
 
-        Enemy3 enemy3 = new Enemy3(this);
+        enemy3 = new Enemy3(this);
         enemy3.setPosition(new Vec2(-6,-2));
 
 

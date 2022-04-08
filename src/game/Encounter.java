@@ -24,6 +24,11 @@ public class Encounter implements CollisionListener {
             e.getReportingBody().destroy();
             new Game();
         }
+        else if (e.getOtherBody() instanceof movingEnemy){
+            System.out.println("You died! Try again");
+            e.getReportingBody().destroy();
+            new Game();
+        }
         else if (e.getOtherBody() instanceof Enemy3){
             System.out.println("You died! Try again");
             e.getReportingBody().destroy();
