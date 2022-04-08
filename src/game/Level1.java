@@ -1,12 +1,20 @@
 package game;
 
 import city.cs.engine.*;
+import city.cs.engine.Shape;
 import org.jbox2d.common.Vec2;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class Level1 extends GameLevel{
 
+    Image background;
+
     public Level1(Game game) {
         super(game);
+
+        background = new ImageIcon("data/Dungeon.png").getImage();
 
 
         // make a suspended platform
@@ -53,6 +61,8 @@ public class Level1 extends GameLevel{
 
         getDoor().setPosition(new Vec2(-9, 10));
 
+
+
     }
 
     @Override
@@ -62,5 +72,10 @@ public class Level1 extends GameLevel{
         else
             return false;
 
+    }
+
+    @Override
+    public Image getBackground() {
+        return background;
     }
 }

@@ -13,8 +13,13 @@ import javax.sound.sampled.UnsupportedAudioFileException;
  */
 public class Game {
 
+    GameLevel currentLevel;
+    GameView  view;
+    KnightController controller;
 
-    private game.GameView view;
+
+
+
     private SoundClip gameMusic;
 
 
@@ -25,7 +30,7 @@ public class Game {
 
 
         //make an empty game world
-        GameLevel currentLevel = new Level1(this);
+        currentLevel = new Level1(this);
 
         try {
             gameMusic = new SoundClip("data/DungeonSound.wav");   // Open an audio input stream
@@ -68,7 +73,7 @@ public class Game {
         currentLevel.start();
 
         //Allow the knight to move when buttons on keyboard are pressed
-        KnightController controller = new KnightController(currentLevel.getKnight());
+        controller = new KnightController(currentLevel.getKnight());
         view.addKeyListener(controller);
         view.addMouseListener(new GiveFocus(view));
 
@@ -84,7 +89,22 @@ public class Game {
 
     }
     public void goToNextLevel(){
-        System.out.println("Transition to next level");
+
+        if (currentLevel instanceof Level1) {
+            currentLevel.stop();
+            currentLevel = new Level2(this);
+
+
+            controller.updateKnight(currentLevel.getKnight());
+
+
+
+            view.setWorld(currentLevel);
+            currentLevel.start();
+
+
+        }
+
     }
 
     /** Run the game. */

@@ -47,4 +47,8 @@ public class KnightController implements KeyListener {
     @Override
     public void keyTyped(KeyEvent e) {
     }
+
+    public void updateKnight(Knight newKnight){
+        knight = newKnight;
+    }
 }
