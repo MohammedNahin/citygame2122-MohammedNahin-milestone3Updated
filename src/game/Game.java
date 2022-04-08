@@ -25,7 +25,7 @@ public class Game {
 
 
         //make an empty game world
-        GameLevel world = new GameLevel();
+        GameLevel currentLevel = new Level1(this);
 
         try {
             gameMusic = new SoundClip("data/DungeonSound.wav");   // Open an audio input stream
@@ -42,7 +42,7 @@ public class Game {
 
 
         // make a view to look into the game world
-        view = new GameView(world, 600, 600);
+        view = new GameView(currentLevel, 600, 600);
         view.setZoom(20);
 
         // create a Java window (frame) and add the game
@@ -65,10 +65,10 @@ public class Game {
         //JFrame debugView = new DebugViewer(world, 600, 600);
 
         // start our game world simulation!
-        world.start();
+        currentLevel.start();
 
         //Allow the knight to move when buttons on keyboard are pressed
-        KnightController controller = new KnightController(world.getKnight());
+        KnightController controller = new KnightController(currentLevel.getKnight());
         view.addKeyListener(controller);
         view.addMouseListener(new GiveFocus(view));
 
@@ -77,6 +77,14 @@ public class Game {
 
 
 
+
+
+
+
+
+    }
+    public void goToNextLevel(){
+        System.out.println("Transition to next level");
     }
 
     /** Run the game. */

@@ -26,7 +26,7 @@ public class GameView extends UserView {
         Font myFont = new Font("Calibre",Font.BOLD,15);
         g.setFont(myFont);
         g.setColor(Color.red);
-        g.drawString("EnergyOrbs collected: " + knight.getEnergyOrbs(),0,12);
+        g.drawString("EnergyOrbs collected: " + knight.getEnergyOrbsCount(),0,12);
 
     }
 }

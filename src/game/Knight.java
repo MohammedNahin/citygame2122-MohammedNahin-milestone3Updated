@@ -30,7 +30,7 @@ public class Knight extends Walker {
 
         System.out.println("You've picked up an orb, Energy orbs = " + energyOrbsCount);
     }
-    public int getEnergyOrbs(){
+    public int getEnergyOrbsCount(){
         return energyOrbsCount;
     }
 }

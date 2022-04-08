@@ -5,6 +5,7 @@ import city.cs.engine.CollisionListener;
 
 public class Encounter implements CollisionListener {
 
+
     private Knight knight;
     public Encounter(Knight knight) {
         this.knight = knight;
@@ -28,5 +29,10 @@ public class Encounter implements CollisionListener {
             e.getReportingBody().destroy();
             new Game();
         }
+        else if (e.getOtherBody() instanceof Door){
+
+
+        }
+
     }
 }

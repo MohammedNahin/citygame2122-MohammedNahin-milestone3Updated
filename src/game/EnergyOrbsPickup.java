@@ -14,7 +14,7 @@ public class EnergyOrbsPickup implements CollisionListener {
     @Override
     public void collide(CollisionEvent e) {
         if (e.getOtherBody() instanceof EnergyOrbs) {
-            knight.setEnergyOrbs(knight.getEnergyOrbs()+1);
+            knight.setEnergyOrbs(knight.getEnergyOrbsCount()+1);
             e.getOtherBody().destroy();
         }
     }

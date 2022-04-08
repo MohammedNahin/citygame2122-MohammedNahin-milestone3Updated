@@ -3,45 +3,40 @@ package game;
 import city.cs.engine.*;
 import org.jbox2d.common.Vec2;
 
-public class GameLevel extends World {
+public abstract class GameLevel extends World {
 
 
     private Knight knight;
+    private EnergyOrbs energyOrbs;
     private Enemy1 enemy1;
     private Enemy2 enemy2;
     private Enemy3 enemy3;
-    private EnergyOrbs energyOrbs;
+    private Door door;
 
 
 
-    public GameLevel() {
+    public GameLevel(Game game) {
         super();
 
 
         // make the character
         knight = new Knight(this);
-        knight.setPosition(new Vec2(7, -14));
+        enemy1 = new Enemy1(this);
+        enemy2 = new Enemy2(this);
+        enemy3 = new Enemy3(this);
+        door = new Door(this);
+
+
         EnergyOrbsPickup pickup = new EnergyOrbsPickup(knight);
         Encounter contact = new Encounter(knight);
+        doorEncounter nextLevel = new doorEncounter(this, game);
+        this.door.addCollisionListener(nextLevel);
         knight.addCollisionListener(contact);
         knight.addCollisionListener(pickup);
 
         //Make the enemies
-        enemy1 = new Enemy1(this);
-        enemy1.setPosition(new Vec2(6, -7));
 
-        enemy2 = new Enemy2(this);
-        enemy2.setPosition(new Vec2(-6, -14));
 
-        enemy3 = new Enemy3(this);
-        enemy3.setPosition(new Vec2(-6, -2));
-
-        //Make the collectible orbs
-        energyOrbs = new EnergyOrbs(this);
-        energyOrbs.setPosition(new Vec2(-12,-14));
-
-        energyOrbs = new EnergyOrbs(this);
-        energyOrbs.setPosition(new Vec2(6,3));
 
 
         // make the ground and ceiling
@@ -53,25 +48,6 @@ public class GameLevel extends World {
         ceiling.setPosition(new Vec2(0,15));
 
 
-        // make a suspended platform
-        Shape platformShape = new BoxShape(4, 0.5f);
-        StaticBody platform = new StaticBody(this, platformShape);
-        platform.setPosition(new Vec2(6, -7));
-
-        Shape platformShape1 = new BoxShape(3,0.5f);
-        StaticBody platform1 = new StaticBody(this, platformShape1);
-        platform1.setPosition(new Vec2(-6,-9));
-
-        StaticBody platform2 = new StaticBody(this, platformShape);
-        platform2.setPosition(new Vec2(-6,-2));
-
-        StaticBody platform3 = new StaticBody(this,platformShape1);
-        platform3.setPosition(new Vec2(6,2));
-
-        Shape platformShape3 = new BoxShape(8,0.5f);
-        StaticBody platform4 = new StaticBody(this,platformShape3);
-        platform4.setPosition(new Vec2(-9,7));
-
         //make walls
         Shape wallShape = new BoxShape(1,20.5f);
         StaticBody wall = new StaticBody(this, wallShape);
@@ -80,16 +56,7 @@ public class GameLevel extends World {
         StaticBody wall1 = new StaticBody(this,wallShape);
         wall1.setPosition(new Vec2(15,-5));
 
-        //Door to next level
-        Shape doorShape = new PolygonShape(-0.11f,2.08f,
-                0.87f,1.68f,
-                0.99f,0.49f,
-                0.24f,-2.0f,
-                -0.95f,-2.0f,
-                -1.14f,1.41f);
-        StaticBody door = new StaticBody(this,doorShape);
-        door.addImage(new BodyImage("data/Dungeondoor.png",7f));
-        door.setPosition(new Vec2(-9,10));
+
 
 
 
@@ -101,6 +68,16 @@ public class GameLevel extends World {
     public Knight getKnight(){
         return knight;
     }
+
+    public Enemy1 getEnemy1() {return enemy1;}
+
+    public Enemy2 getEnemy2() {return enemy2;}
+
+    public Enemy3 getEnemy3() {return enemy3;}
+
+    public Door getDoor() {return door;}
+
+    public abstract boolean isComplete();
 
 
 
