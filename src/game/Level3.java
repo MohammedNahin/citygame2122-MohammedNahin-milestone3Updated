@@ -20,7 +20,7 @@ public class Level3 extends GameLevel {
 
         //Make the collectible orbs
         EnergyOrbs energyOrbs1 = new EnergyOrbs(this);
-        energyOrbs1.setPosition(new Vec2(-12,-14));
+        energyOrbs1.setPosition(new Vec2(0,4));
 
 
         // make a suspended platform
@@ -29,7 +29,10 @@ public class Level3 extends GameLevel {
         platform.setPosition(new Vec2(-12, -10));
 
         StaticBody platform1 = new StaticBody(this,platformShape);
-        platform1.setPosition(new Vec2(-0,3));
+        platform1.setPosition(new Vec2(0,3));
+
+        StaticBody platform2 = new StaticBody(this,platformShape);
+        platform2.setPosition(new Vec2(-5,-5));
 
 
         LavaFloor lavaFloor = new LavaFloor(this);
@@ -71,7 +74,7 @@ public class Level3 extends GameLevel {
 
         getKnight().setPosition(new Vec2(-12, -9));
 
-        getDoor().setPosition(new Vec2(11, 5));
+        getDoor().setPosition(new Vec2(11, 6));
 
 
 
