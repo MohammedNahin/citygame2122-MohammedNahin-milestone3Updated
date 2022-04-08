@@ -11,9 +11,6 @@ public abstract class GameLevel extends World {
 
     private Knight knight;
     private EnergyOrbs energyOrbs;
-    private Enemy1 enemy1;
-    private Enemy2 enemy2;
-    private Enemy3 enemy3;
     private Door door;
 
 
@@ -24,9 +21,6 @@ public abstract class GameLevel extends World {
 
         // make the character
         knight = new Knight(this);
-        enemy1 = new Enemy1(this);
-        enemy2 = new Enemy2(this);
-        enemy3 = new Enemy3(this);
         door = new Door(this);
 
 
@@ -71,12 +65,6 @@ public abstract class GameLevel extends World {
     public Knight getKnight(){
         return knight;
     }
-
-    public Enemy1 getEnemy1() {return enemy1;}
-
-    public Enemy2 getEnemy2() {return enemy2;}
-
-    public Enemy3 getEnemy3() {return enemy3;}
 
     public Door getDoor() {return door;}
 

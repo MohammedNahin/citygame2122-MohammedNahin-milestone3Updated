@@ -10,6 +10,9 @@ import java.awt.*;
 public class Level1 extends GameLevel{
 
     Image background;
+    private Enemy1 enemy1;
+    private Enemy2 enemy2;
+    private Enemy3 enemy3;
 
     public Level1(Game game) {
         super(game);
@@ -53,11 +56,15 @@ public class Level1 extends GameLevel{
 
         getKnight().setPosition(new Vec2(7, -14));
 
-        getEnemy1().setPosition(new Vec2(6, -7));
+        Enemy1 enemy1 = new Enemy1(this);
+        enemy1.setPosition(new Vec2(7,-7));
 
-        getEnemy2().setPosition(new Vec2(-6, -14));
+        Enemy2 enemy2 = new Enemy2(this);
+        enemy2.setPosition(new Vec2(-6,-14));
 
-        getEnemy3().setPosition(new Vec2(-6, -2));
+        Enemy3 enemy3 = new Enemy3(this);
+        enemy3.setPosition(new Vec2(-6,-2));
+
 
         getDoor().setPosition(new Vec2(-9, 10));
 

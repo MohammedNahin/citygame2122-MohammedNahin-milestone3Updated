@@ -53,11 +53,6 @@ public class Level2 extends GameLevel {
 
         getKnight().setPosition(new Vec2(7, -14));
 
-        getEnemy1().setPosition(new Vec2(-6, -14));
-
-        getEnemy2().setPosition(new Vec2(-6, -14));
-
-        getEnemy3().setPosition(new Vec2(-6, -14));
 
         getDoor().setPosition(new Vec2(-9, 10));
 
