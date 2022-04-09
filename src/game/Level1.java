@@ -24,7 +24,7 @@ public class Level1 extends GameLevel{
         this.game = game;
         try {
             gameMusic = new SoundClip("data/DungeonSound.wav");   // Open an audio input stream
-            gameMusic.loop();                              // Set it to continous playback (looping)
+            gameMusic.play();                              // Set it to continous playback (looping)
         } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
             //code in here will deal with any errors
             //that might occur while loading/playing sound

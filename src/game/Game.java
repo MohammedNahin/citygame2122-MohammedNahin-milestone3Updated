@@ -2,8 +2,11 @@ package game;
 
 import city.cs.engine.*;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
@@ -43,6 +46,8 @@ public class Game {
         //   view to it
         final JFrame frame = new JFrame("Dungeon Game");
         frame.add(view);
+
+
 
         // enable the frame to quit the application
         // when the x button is pressed
