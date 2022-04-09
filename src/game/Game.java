@@ -11,6 +11,7 @@ import java.io.IOException;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 
+
 /**
  * Your main game entry point
  */
@@ -47,6 +48,12 @@ public class Game {
         final JFrame frame = new JFrame("Dungeon Game");
         frame.add(view);
 
+        ControlPanel controlPanel = new ControlPanel(this);
+        frame.add(controlPanel.getMainPanel(), BorderLayout.WEST);
+
+
+
+
 
 
         // enable the frame to quit the application
@@ -65,6 +72,11 @@ public class Game {
 
         // start our game world simulation!
         currentLevel.start();
+
+
+
+
+
 
         //Allow the knight to move when buttons on keyboard are pressed
         controller = new KnightController(currentLevel.getKnight());
@@ -118,4 +130,15 @@ public class Game {
 
         new Game();
     }
+
+    public void pause() {currentLevel.stop();
+    }
+
+    public void resume() {currentLevel.start();
+    }
+
+    public void restart()  {new Game();
+
+    }
+
 }
