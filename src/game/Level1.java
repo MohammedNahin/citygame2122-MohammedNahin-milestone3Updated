@@ -31,7 +31,7 @@ public class Level1 extends GameLevel{
             System.out.println(e);
         }
 
-        background = new ImageIcon("data/Dungeon.png").getImage();
+        background = new ImageIcon("data/Dungeon.png" ).getImage();
 
 
         // make a suspended platform

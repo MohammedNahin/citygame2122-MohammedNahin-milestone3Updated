@@ -137,7 +137,7 @@ public class Game {
     public void resume() {currentLevel.start();
     }
 
-    public void restart()  {new Game();
+    public void quit()  {System.exit(0);
 
     }
 

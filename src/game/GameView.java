@@ -10,16 +10,23 @@ public class GameView extends UserView {
 
     private Image background;
     private Knight knight;
+    GameLevel currentLevel;
 
     public GameView(GameLevel world, int width, int height) {
         super(world, width, height);
-        background = new ImageIcon("data/Dungeon.png").getImage();
         knight = world.getKnight();
+        currentLevel = world;
 
+    }
+
+    @Override
+    public void setWorld(World world){
+        super.setWorld(world);
+        currentLevel = (GameLevel) world;
     }
     @Override
     protected void paintBackground(Graphics2D g) {
-        g.drawImage(background, 0, 0, this);
+        g.drawImage(currentLevel.getBackground(), 0, 0, this);
     }
 
 

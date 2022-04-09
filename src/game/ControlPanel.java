@@ -8,7 +8,7 @@ public class ControlPanel {
     private JPanel mainPanel;
     private JButton pauseButton;
     private JButton resumeButton;
-    private JButton restartButton;
+    private JButton quitButton;
     private Game game;
 
     public ControlPanel(Game game){
@@ -29,10 +29,10 @@ public class ControlPanel {
                 game.resume();
             }
         });
-        restartButton.addActionListener(new ActionListener() {
+        quitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                game.restart();
+                game.quit();
             }
         });
     }

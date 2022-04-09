@@ -33,7 +33,7 @@ public class Level4 extends GameLevel {
             System.out.println(e);
         }
 
-        background = new ImageIcon("data/Dungeon.png").getImage();
+        background = new ImageIcon("data/Castle2.png").getImage();
 
         //Make the collectible orbs
         EnergyOrbs energyOrbs1 = new EnergyOrbs(this);
