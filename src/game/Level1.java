@@ -4,8 +4,11 @@ import city.cs.engine.*;
 import city.cs.engine.Shape;
 import org.jbox2d.common.Vec2;
 
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class Level1 extends GameLevel{
 
@@ -13,9 +16,20 @@ public class Level1 extends GameLevel{
     private Enemy1 enemy1;
     private Enemy2 enemy2;
     private Enemy3 enemy3;
+    private Game game;
+    private SoundClip gameMusic;
 
     public Level1(Game game) {
         super(game);
+        this.game = game;
+        try {
+            gameMusic = new SoundClip("data/DungeonSound.wav");   // Open an audio input stream
+            gameMusic.loop();                              // Set it to continous playback (looping)
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            //code in here will deal with any errors
+            //that might occur while loading/playing sound
+            System.out.println(e);
+        }
 
         background = new ImageIcon("data/Dungeon.png").getImage();
 

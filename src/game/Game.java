@@ -32,17 +32,6 @@ public class Game {
         //make an empty game world
         currentLevel = new Level1(this);
 
-        try {
-            gameMusic = new SoundClip("data/DungeonSound.wav");   // Open an audio input stream
-            gameMusic.loop();                              // Set it to continous playback (looping)
-        } catch (UnsupportedAudioFileException|IOException|LineUnavailableException e) {
-            //code in here will deal with any errors
-            //that might occur while loading/playing sound
-            System.out.println(e);
-        }
-
-
-
 
 
 
