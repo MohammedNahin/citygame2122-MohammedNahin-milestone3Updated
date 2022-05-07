@@ -10,7 +10,6 @@ public abstract class GameLevel extends World {
 
 
     private final Knight knight;
-    private EnergyOrbs energyOrbs;
     private final Door door;
 
 
