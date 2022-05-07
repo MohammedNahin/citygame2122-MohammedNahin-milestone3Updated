@@ -14,6 +14,12 @@ import java.io.IOException;
 
 public class Level2 extends GameLevel {
 
+
+    //Fields
+    /**
+     * @param movingEnemy the only type of enemy in this level
+     *
+     */
     Image background;
     private final movingEnemy movingenemy;
     private final Game game;
@@ -63,6 +69,7 @@ public class Level2 extends GameLevel {
 
         StaticBody wall1 = new StaticBody(this, wallShape);
         wall1.setPosition(new Vec2(15, -5));
+
 
         movingenemy = new movingEnemy(this);
         movingenemy.setPosition(new Vec2(-5,-14));
