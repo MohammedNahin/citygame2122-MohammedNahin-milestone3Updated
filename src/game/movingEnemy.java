@@ -13,6 +13,7 @@ public class movingEnemy extends Walker implements StepListener{
             -1.14f,1.41f);
     //Image flips when enemy changes direction
     private final String direction;
+    //Image for this specific enemy
     private static final BodyImage leftImage =
             new BodyImage("data/movingEnemy.png", 4f);
 
