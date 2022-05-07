@@ -60,6 +60,7 @@ public class Encounter implements CollisionListener {
             }
             new Game();
         }
+        //Knight will die upon contact with lava
         else if (e.getOtherBody() instanceof LavaFloor){
             System.out.println("You died to lava! Try again");
             e.getReportingBody().destroy();
