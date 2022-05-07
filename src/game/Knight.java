@@ -13,7 +13,7 @@ public class Knight extends Walker {
     private static final BodyImage image =
             new BodyImage("data/Knight.png", 5f);
 
-    private int energyOrbs;
+    private final int energyOrbs;
     private int energyOrbsCount;
 
 

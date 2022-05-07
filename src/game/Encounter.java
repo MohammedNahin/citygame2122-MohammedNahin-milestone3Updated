@@ -12,7 +12,7 @@ import java.io.IOException;
 public class Encounter implements CollisionListener {
 
 
-    private Knight knight;
+    private final Knight knight;
     private static SoundClip gameMusic;
     public Encounter(Knight knight) {
         this.knight = knight;

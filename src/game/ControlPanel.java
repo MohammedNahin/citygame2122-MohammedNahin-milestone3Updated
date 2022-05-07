@@ -9,7 +9,7 @@ public class ControlPanel {
     private JButton pauseButton;
     private JButton resumeButton;
     private JButton quitButton;
-    private Game game;
+    private final Game game;
 
     public ControlPanel(Game game){
         this.game = game;

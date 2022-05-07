@@ -7,8 +7,8 @@ import org.jbox2d.common.Vec2;
 import java.awt.geom.Point2D;
 
 public class Tracker implements StepListener {
-    private GameView view;
-    private Knight knight;
+    private final GameView view;
+    private final Knight knight;
     public Tracker(GameView view, Knight knight) {
         this.knight = knight;
         this.view = view;

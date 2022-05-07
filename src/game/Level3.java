@@ -16,7 +16,7 @@ public class Level3 extends GameLevel {
 
     Image background;
     private SoundClip gameMusic;
-    private Game game;
+    private final Game game;
 
     public Level3(Game game){
         super(game);
@@ -102,10 +102,7 @@ public class Level3 extends GameLevel {
     }
     @Override
     public boolean isComplete() {
-        if (getKnight().getEnergyOrbsCount() >=1)
-            return true;
-        else
-            return false;
+        return getKnight().getEnergyOrbsCount() >= 1;
 
     }
     @Override

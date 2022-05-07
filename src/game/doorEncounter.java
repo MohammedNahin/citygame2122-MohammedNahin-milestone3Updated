@@ -5,7 +5,7 @@ import city.cs.engine.CollisionListener;
 
 public class doorEncounter implements CollisionListener {
     private GameLevel level;
-    private Game game;
+    private final Game game;
 
 
     GameLevel currentlevel;

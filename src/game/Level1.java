@@ -13,10 +13,10 @@ import java.io.IOException;
 public class Level1 extends GameLevel{
 
     Image background;
-    private Enemy1 enemy1;
-    private Enemy2 enemy2;
-    private Enemy3 enemy3;
-    private Game game;
+    private final Enemy1 enemy1;
+    private final Enemy2 enemy2;
+    private final Enemy3 enemy3;
+    private final Game game;
     private SoundClip gameMusic;
 
     public Level1(Game game) {
@@ -88,10 +88,7 @@ public class Level1 extends GameLevel{
 
     @Override
     public boolean isComplete() {
-        if (getKnight().getEnergyOrbsCount() >=1)
-            return true;
-        else
-            return false;
+        return getKnight().getEnergyOrbsCount() >= 1;
 
     }
 

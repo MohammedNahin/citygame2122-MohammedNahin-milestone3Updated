@@ -9,7 +9,7 @@ import java.awt.*;
 public class GameView extends UserView {
 
     private Image background;
-    private Knight knight;
+    private final Knight knight;
     GameLevel currentLevel;
 
     public GameView(GameLevel world, int width, int height) {

@@ -15,8 +15,8 @@ import java.io.IOException;
 public class Level2 extends GameLevel {
 
     Image background;
-    private movingEnemy movingenemy;
-    private Game game;
+    private final movingEnemy movingenemy;
+    private final Game game;
     private SoundClip gameMusic;
 
     public Level2(Game game){
@@ -83,10 +83,7 @@ public class Level2 extends GameLevel {
     }
     @Override
     public boolean isComplete() {
-        if (getKnight().getEnergyOrbsCount() >=2)
-            return true;
-        else
-            return false;
+        return getKnight().getEnergyOrbsCount() >= 2;
 
     }
     @Override

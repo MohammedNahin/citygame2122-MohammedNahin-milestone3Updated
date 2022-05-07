@@ -11,7 +11,7 @@ public class movingEnemy extends Walker implements StepListener{
             -0.95f,-2.0f,
             -1.14f,1.41f);
 
-    private String direction;
+    private final String direction;
     private static final BodyImage leftImage =
             new BodyImage("data/movingEnemy.png", 4f);
 

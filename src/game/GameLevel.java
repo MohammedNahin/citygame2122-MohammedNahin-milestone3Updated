@@ -9,9 +9,9 @@ import java.awt.*;
 public abstract class GameLevel extends World {
 
 
-    private Knight knight;
+    private final Knight knight;
     private EnergyOrbs energyOrbs;
-    private Door door;
+    private final Door door;
 
 
 

@@ -6,7 +6,7 @@ import city.cs.engine.CollisionListener;
 
 public class EnergyOrbsPickup implements CollisionListener {
 
-    private Knight knight;
+    private final Knight knight;
     public EnergyOrbsPickup(Knight s){
         this.knight = s;
     }
