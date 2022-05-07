@@ -27,7 +27,7 @@ public class EnergyOrbs extends DynamicBody {
         super(w,energyOrbsShape);
         addImage(image);
     }
-
+//Destroys orb and plays sound when interacts with Knight
     @Override
     public void destroy()
     {
