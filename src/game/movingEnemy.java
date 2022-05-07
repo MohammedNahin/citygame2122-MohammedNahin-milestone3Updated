@@ -19,6 +19,7 @@ public class movingEnemy extends Walker implements StepListener{
     private static final BodyImage rightImage =
             new BodyImage("data/movingEnemy.png", 4f);
 
+    //How fast and how far the enemy moves
     private final int SPEED = 3;
     private float left, right;
     private final int RANGE = 5;
