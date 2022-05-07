@@ -50,7 +50,7 @@ public class Level3 extends GameLevel {
         StaticBody platform2 = new StaticBody(this,platformShape);
         platform2.setPosition(new Vec2(-5,-5));
 
-
+        //The lava added on this level
         LavaFloor lavaFloor = new LavaFloor(this);
         lavaFloor.setPosition(new Vec2(-12,-14));
 
