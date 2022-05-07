@@ -91,10 +91,10 @@ public class Level1 extends GameLevel{
 
 
     }
-
+    // Can only go to next level if target energyorbs are obtained
     @Override
     public boolean isComplete() {
-        return getKnight().getEnergyOrbsCount() >= 1;
+        return getKnight().getEnergyOrbsCount() >= 2;
 
     }
 
