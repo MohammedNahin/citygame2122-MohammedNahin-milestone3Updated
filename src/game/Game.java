@@ -133,7 +133,7 @@ public class Game {
     //Pauses game when button pressed
     public void pause() {currentLevel.stop();
     }
-
+    //Resumes game when button pressed
     public void resume() {currentLevel.start();
     }
 
