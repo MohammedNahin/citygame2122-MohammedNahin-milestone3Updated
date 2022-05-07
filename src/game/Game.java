@@ -48,6 +48,7 @@ public class Game {
         final JFrame frame = new JFrame("Dungeon Game");
         frame.add(view);
 
+        // creates a control panel with buttons to control game
         ControlPanel controlPanel = new ControlPanel(this);
         frame.add(controlPanel.getMainPanel(), BorderLayout.WEST);
 
@@ -92,7 +93,7 @@ public class Game {
 
 
 
-
+    // code that allows levels
     }
     public void goToNextLevel(){
 
