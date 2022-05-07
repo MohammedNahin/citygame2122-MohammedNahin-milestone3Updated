@@ -10,6 +10,7 @@ public class Knight extends Walker {
             0.24f,-2.0f,
             -0.95f,-2.0f,
             -1.14f,1.41f);
+    //specific image used for knight
     private static final BodyImage image =
             new BodyImage("data/Knight.png", 5f);
 
