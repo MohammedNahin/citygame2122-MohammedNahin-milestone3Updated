@@ -2,7 +2,7 @@ package game;
 
 
 import city.cs.engine.*;
-
+//Walker class so that the knight can move and jump
 public class Knight extends Walker {
     private static final Shape knightShape = new PolygonShape(-0.11f,2.08f,
             0.87f,1.68f,
