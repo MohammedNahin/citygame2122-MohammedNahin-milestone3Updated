@@ -13,7 +13,7 @@ public class doorEncounter implements CollisionListener {
     public doorEncounter(GameLevel level, Game game) {
         this.currentlevel = level;
         this.game = game;
-
+//Knight colliding with door sends it to the next if all conditions are met
     }
     public void collide(CollisionEvent e) {
         if (e.getOtherBody() instanceof Knight && this.currentlevel.isComplete()) {
