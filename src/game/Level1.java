@@ -74,7 +74,6 @@ public class Level1 extends GameLevel{
         EnergyOrbs energyOrbs2 = new EnergyOrbs(this);
         energyOrbs2.setPosition(new Vec2(6, 3));
 
-        getKnight().setPosition(new Vec2(7, -14));
 
         enemy1 = new Enemy1(this);
         enemy1.setPosition(new Vec2(7,-7));
@@ -85,6 +84,8 @@ public class Level1 extends GameLevel{
         enemy3 = new Enemy3(this);
         enemy3.setPosition(new Vec2(-6,-2));
 
+        //Gets knight and door from Gamelevel and adds it to current level
+        getKnight().setPosition(new Vec2(7, -14));
 
         getDoor().setPosition(new Vec2(-9, 10));
 
