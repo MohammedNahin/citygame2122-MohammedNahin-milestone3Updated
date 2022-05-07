@@ -3,6 +3,7 @@ package game;
 import city.cs.engine.*;
 import org.jbox2d.common.Vec2;
 
+//Walker class so that enemy can walk
 public class movingEnemy extends Walker implements StepListener{
     private static final Shape patrollingEnemyShape = new PolygonShape(-0.11f,2.08f,
             0.87f,1.68f,
@@ -10,7 +11,7 @@ public class movingEnemy extends Walker implements StepListener{
             0.24f,-2.0f,
             -0.95f,-2.0f,
             -1.14f,1.41f);
-
+    //Image flips when enemy changes direction
     private final String direction;
     private static final BodyImage leftImage =
             new BodyImage("data/movingEnemy.png", 4f);
@@ -28,7 +29,6 @@ public class movingEnemy extends Walker implements StepListener{
         addImage(rightImage);
         world.addStepListener(this);
         direction = "left";
-        //setAlwaysOutline(true); - used to see outline of body
         startWalking(SPEED);
 
     }
