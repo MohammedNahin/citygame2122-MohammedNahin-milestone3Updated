@@ -10,7 +10,7 @@ public class Enemy2 extends Walker {
             0.24f,-2.0f,
             -0.95f,-2.0f,
             -1.14f,1.41f);
-
+//Gives a specific image to Enemy2
     private static final BodyImage image =
             new BodyImage("data/Enemy2.png", 3f);
 
