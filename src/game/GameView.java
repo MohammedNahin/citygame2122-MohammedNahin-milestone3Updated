@@ -29,7 +29,7 @@ public class GameView extends UserView {
         g.drawImage(currentLevel.getBackground(), 0, 0, this);
     }
 
-
+//Text on top left corner about energy orbs
     protected void paintForeground(Graphics2D g){
         Font myFont = new Font("Calibre",Font.BOLD,15);
         g.setFont(myFont);
