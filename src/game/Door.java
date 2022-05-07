@@ -3,6 +3,7 @@ package game;
 
 import city.cs.engine.*;
 
+//Static body for Door so that door doesn't make any movements
 public class Door extends StaticBody {
     private static final Shape doorShape = new PolygonShape(-0.11f,2.08f,
             0.87f,1.68f,
