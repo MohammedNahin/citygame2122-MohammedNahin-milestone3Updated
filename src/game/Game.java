@@ -136,7 +136,7 @@ public class Game {
     //Resumes game when button pressed
     public void resume() {currentLevel.start();
     }
-
+    //Quits game when button pressed
     public void quit()  {System.exit(0);
 
     }
