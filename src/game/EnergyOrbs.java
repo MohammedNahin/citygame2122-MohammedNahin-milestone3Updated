@@ -5,10 +5,10 @@ import city.cs.engine.*;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import java.io.IOException;
-
+// The collectible available in game
 public class EnergyOrbs extends DynamicBody {
     private static SoundClip EnergyOrbsSound;
-
+// The sound played when an energy orb is picked up
     static {
         try {
             EnergyOrbsSound = new SoundClip("data/EnergyOrbsSound.wav");
@@ -19,7 +19,7 @@ public class EnergyOrbs extends DynamicBody {
     }
 
     private static final Shape energyOrbsShape = new CircleShape(1);
-
+// The specific image used for energyorbs
     private static final BodyImage image =
             new BodyImage("data/EnergyOrb.png", 2f);
 
