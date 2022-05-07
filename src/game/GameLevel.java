@@ -19,7 +19,7 @@ public abstract class GameLevel extends World {
         super();
 
 
-        // make the character
+        // make the character and door
         knight = new Knight(this);
         door = new Door(this);
 
@@ -31,7 +31,6 @@ public abstract class GameLevel extends World {
         knight.addCollisionListener(contact);
         knight.addCollisionListener(pickup);
 
-        //Make the enemies
 
 
 
