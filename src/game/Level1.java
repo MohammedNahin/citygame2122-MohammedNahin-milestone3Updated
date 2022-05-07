@@ -12,6 +12,12 @@ import java.io.IOException;
 
 public class Level1 extends GameLevel{
 
+    //Fields
+    /**
+     * @param Enemy1 the first enemy in this level
+     * @param Enemy2 the second enemy in this level
+     * @param Enemy3 the third enemy in this level
+     */
     Image background;
     private final Enemy1 enemy1;
     private final Enemy2 enemy2;
@@ -30,7 +36,7 @@ public class Level1 extends GameLevel{
             //that might occur while loading/playing sound
             System.out.println(e);
         }
-
+        //The background image used for this level
         background = new ImageIcon("data/Dungeon.png" ).getImage();
 
 
