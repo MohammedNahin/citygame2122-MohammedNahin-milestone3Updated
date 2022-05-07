@@ -13,7 +13,10 @@ import java.awt.*;
 import java.io.IOException;
 
 public class Level4 extends GameLevel {
-
+    //Fields
+    /**
+     * @param movingEnemy the only type of enemy in this level
+     */
     Image background;
     private final movingEnemy movingenemy;
     private final movingEnemy movingEnemy1;
