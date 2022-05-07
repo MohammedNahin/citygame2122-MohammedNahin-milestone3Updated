@@ -31,7 +31,7 @@ public class Level3 extends GameLevel {
             System.out.println(e);
         }
 
-
+        //The background image for this level
         background = new ImageIcon("data/Castle1.png").getImage();
 
         //Make the collectible orbs
