@@ -37,7 +37,7 @@ public class Level2 extends GameLevel {
             //that might occur while loading/playing sound
             System.out.println(e);
         }
-
+        //The background image used for this level
         background = new ImageIcon("data/Dungeon2.png").getImage();
 
         //Make the collectible orbs
