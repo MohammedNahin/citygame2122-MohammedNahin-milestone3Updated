@@ -13,7 +13,7 @@ public class Encounter implements CollisionListener {
 
 
     private Knight knight;
-    private SoundClip gameMusic;
+    private static SoundClip gameMusic;
     public Encounter(Knight knight) {
         this.knight = knight;
     }
