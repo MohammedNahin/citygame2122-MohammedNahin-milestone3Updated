@@ -25,7 +25,7 @@ public class Level2 extends GameLevel {
     private final Game game;
     private SoundClip gameMusic;
 
-    public Level2(Game game){
+    public Level2(Game game) {
         super(game);
         this.game = game;
 
@@ -42,24 +42,24 @@ public class Level2 extends GameLevel {
 
         //Make the collectible orbs
         EnergyOrbs energyOrbs1 = new EnergyOrbs(this);
-        energyOrbs1.setPosition(new Vec2(-12,-14));
+        energyOrbs1.setPosition(new Vec2(-12, -14));
 
         EnergyOrbs energyOrbs2 = new EnergyOrbs(this);
-        energyOrbs2.setPosition(new Vec2(0,1));
+        energyOrbs2.setPosition(new Vec2(0, 1));
 
         // make a suspended platform
         Shape platformShape = new BoxShape(4, 0.5f);
         StaticBody platform = new StaticBody(this, platformShape);
         platform.setPosition(new Vec2(0, 0));
 
-        StaticBody platform1 = new StaticBody(this,platformShape);
-        platform1.setPosition(new Vec2(12,6));
+        StaticBody platform1 = new StaticBody(this, platformShape);
+        platform1.setPosition(new Vec2(12, 6));
 
-        StaticBody platform2 = new StaticBody(this,platformShape);
-        platform2.setPosition(new Vec2(0,-9));
+        StaticBody platform2 = new StaticBody(this, platformShape);
+        platform2.setPosition(new Vec2(0, -9));
 
-        StaticBody platform3 = new StaticBody(this,platformShape);
-        platform3.setPosition(new Vec2(-12,-5));
+        StaticBody platform3 = new StaticBody(this, platformShape);
+        platform3.setPosition(new Vec2(-12, -5));
 
 
         //make walls
@@ -72,7 +72,7 @@ public class Level2 extends GameLevel {
 
         //Add the moving enemy to the level
         movingenemy = new movingEnemy(this);
-        movingenemy.setPosition(new Vec2(-5,-14));
+        movingenemy.setPosition(new Vec2(-5, -14));
 
 
         //Gets knight and door from Gamelevel and adds it to current level
@@ -81,14 +81,8 @@ public class Level2 extends GameLevel {
         getDoor().setPosition(new Vec2(11, 8));
 
 
-
-
-
-
-
-
     }
-
+    //Can only go to next level if target energyorbs are obtained
     @Override
     public boolean isComplete() {
         return getKnight().getEnergyOrbsCount() >= 2;
