@@ -70,7 +70,7 @@ public class Level2 extends GameLevel {
         StaticBody wall1 = new StaticBody(this, wallShape);
         wall1.setPosition(new Vec2(15, -5));
 
-
+        //Add the moving enemy to the level
         movingenemy = new movingEnemy(this);
         movingenemy.setPosition(new Vec2(-5,-14));
 
