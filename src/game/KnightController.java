@@ -6,7 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KnightController implements KeyListener {
-
+//how fast the knight walks and how high the knight jumps
     private static final float WALKING_SPEED = 4;
     private static final float JUMPING_SPEED = 10;
 
