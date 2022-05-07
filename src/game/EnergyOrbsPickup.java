@@ -11,6 +11,8 @@ public class EnergyOrbsPickup implements CollisionListener {
         this.knight = s;
     }
 
+    // Collision between knight and energyorbs
+    // Results in knight picking up energyorb
     @Override
     public void collide(CollisionEvent e) {
         if (e.getOtherBody() instanceof EnergyOrbs) {
