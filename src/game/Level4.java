@@ -67,7 +67,7 @@ public class Level4 extends GameLevel {
         movingEnemy1.setPosition(new Vec2(5,-14));
 
 
-
+        // Gets knight and door from Gamelevel and adds it to current level
         getKnight().setPosition(new Vec2(0, 11));
 
         getDoor().setPosition(new Vec2(0, 2));
