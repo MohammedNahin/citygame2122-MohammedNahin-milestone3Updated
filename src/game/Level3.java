@@ -98,7 +98,7 @@ public class Level3 extends GameLevel {
 
 
 
-
+    //Can only go to next level if target energyorbs are obtained
     }
     @Override
     public boolean isComplete() {
