@@ -13,7 +13,7 @@ import java.awt.*;
 import java.io.IOException;
 
 public class Level3 extends GameLevel {
-
+    //Fields
     Image background;
     private SoundClip gameMusic;
     private final Game game;
