@@ -75,7 +75,7 @@ public class Level2 extends GameLevel {
         movingenemy.setPosition(new Vec2(-5,-14));
 
 
-
+        //Gets knight and door from Gamelevel and adds it to current level
         getKnight().setPosition(new Vec2(7, -14));
 
         getDoor().setPosition(new Vec2(11, 8));
@@ -88,6 +88,7 @@ public class Level2 extends GameLevel {
 
 
     }
+
     @Override
     public boolean isComplete() {
         return getKnight().getEnergyOrbsCount() >= 2;
