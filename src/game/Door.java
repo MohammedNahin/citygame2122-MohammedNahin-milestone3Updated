@@ -11,7 +11,7 @@ public class Door extends StaticBody {
             0.24f,-2.0f,
             -0.95f,-2.0f,
             -1.14f,1.41f);
-
+//Door is given an image
     private static final BodyImage image =
             new BodyImage("data/Dungeondoor.png", 4f);
 
