@@ -21,6 +21,7 @@ public class KnightController implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
         // other key commands omitted
+        // allows knight to move
         if (code == KeyEvent.VK_LEFT) {
             knight.startWalking(-WALKING_SPEED);
         } else if (code == KeyEvent.VK_RIGHT) {
